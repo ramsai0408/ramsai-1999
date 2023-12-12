@@ -85,7 +85,7 @@ function Visuals() {
 
     if (selectedMonth) {
       axios
-        .get(`http://localhost:3002/get-expenses/${userId}?month=${selectedMonth}`, {
+        .get(`http://174.138.56.121:3002/get-expenses/${userId}?month=${selectedMonth}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
