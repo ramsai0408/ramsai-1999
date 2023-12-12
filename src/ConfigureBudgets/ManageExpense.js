@@ -28,7 +28,7 @@ function ManageExpense() {
         const userId = localStorage.getItem('userId');
         const token = localStorage.getItem('token');
   
-        const categoriesResponse = await axios.get(`http://localhost:3002/get-categories/${userId}?month=${selectedMonth}`, {
+        const categoriesResponse = await axios.get(`http://174.138.56.121:3002/get-categories/${userId}?month=${selectedMonth}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -58,7 +58,7 @@ function ManageExpense() {
         console.error('Month, category, and expense amount are required');
         return;
       }
-      await axios.post('http://localhost:3002/add-expense', {
+      await axios.post('http://174.138.56.121:3002/add-expense', {
         userId: userId,
         month: selectedMonth,
         category: selectedCategory,
